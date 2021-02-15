@@ -21,12 +21,18 @@ class ArticleFactory extends Factory
      */
     public function definition()
     {
+        $array = [
+            '1.jpg',
+            '2.png',
+            '3.png',
+        ];
+
         return [
-            'user_id' => $this->faker->numberBetween($min = 1, $max = 10),
-            'category_id' => $this->faker->numberBetween($min = 1, $max = 10),
-            'title' => $this->faker->word,
+            'user_id' => $this->faker->numberBetween($min = 2, $max = 11),
+            'category_id' => $this->faker->numberBetween($min = 1, $max = 5),
+            'title' => $this->faker->words($nb = 3, $variableNbWords = true),
             'description' => $this->faker->paragraph($nbSentences = 3, $variableNbSentences = true),
-            'image' => 'https://dummyimage.com/600x400/000/fff&text='.$this->faker->word,
+            'image' => $this->faker->randomElement($array),
         ];
     }
 }

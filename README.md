@@ -7,7 +7,8 @@ Step to Run Project
 6.	Run “composer install” in cmd
 7.	Run “npm install” in cmd
 8.	Run “php artisan migrate:fresh –seed” in cmd
-9.	Run “php artisan serve” in cmd 
+9.	Run “php artisan storage:link” in cmd
+10.	Run “php artisan serve” in cmd 
 
 To Auto Refresh when editing
 npm run watch
